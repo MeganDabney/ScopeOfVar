@@ -1,0 +1,19 @@
+public class ScopeOfVar {
+	int i = 35;  //instance variable
+	static int z; // class variable
+	static {
+		z = 20;
+		System.out.println("inside static block: " + z);
+	}
+	void test() {
+		int k = 400; // local variable
+		System.out.println("local variable: " + (k+i));
+}
+
+	public static void main(String[] args) {
+		ScopeOfVar obj = new ScopeOfVar();
+		obj.test();
+		System.out.println(obj.i);
+	}
+
+}
